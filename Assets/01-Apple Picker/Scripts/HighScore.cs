@@ -17,5 +17,15 @@ public class HighScore : MonoBehaviour
     {
         Text gt = this.GetComponent<Text>();
         gt.text = "High Score: " + score;
+        if(score > PlayerPrefs.GetInt("HighScore")){
+            PlayerPrefs.SetInt("HighScore", score);
+        }
+    }
+    void Awake()
+    {
+        if(PlayerPrefs.HasKey("HighScore")){
+            score = PlayerPrefs.GetInt("HighScore");
+        }
+        PlayerPrefs.SetInt("HighScore", score);
     }
 }
