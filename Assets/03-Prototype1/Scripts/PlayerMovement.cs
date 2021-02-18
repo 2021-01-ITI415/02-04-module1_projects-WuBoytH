@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.RightArrow)){
             if(velocity.x < maxXVelocity){
-                velocity.x += 0.3f;
+                velocity.x += 0.9f;
                 if(velocity.x >= maxXVelocity){
                     velocity.x = maxXVelocity;
                 }
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow)){
             if(velocity.x > -maxXVelocity){
-                velocity.x -= 0.3f;
+                velocity.x -= 0.9f;
                 if(velocity.x <= -maxXVelocity){
                     velocity.x = -maxXVelocity;
                 }
